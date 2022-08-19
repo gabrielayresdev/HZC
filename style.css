@@ -3,6 +3,18 @@
     src: url(font/icones.ttf);
 }
 
+@media screen and (min-width: 480px) {
+    .menu-lateral {
+        width: 25vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .menu-lateral {
+        width: 15vw;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -29,6 +41,8 @@ body {
 .cabecalho__menu i::before {
     content: "\e904";
     font-size: 24px;
+
+    cursor: pointer;
 }
 
 .cabecalho__logo {
@@ -38,6 +52,8 @@ body {
 .cabecalho__notificacao i::before {
     content: "\e906";
     font-size: 24px;
+
+    cursor: pointer;
 }
 
 /* MENU LATERAL */
@@ -114,14 +130,106 @@ body {
     content: "\e90a";
 }
 
-@media screen and (min-width: 480px) {
-    .menu-lateral {
-        width: 25vw;
-    }
+/* CARTÃO DESTAQUE */
+
+.principal {
+    padding: 24px 16px;
 }
 
-@media screen and (min-width: 1024px) {
-    .menu-lateral {
-        width: 15vw;
-    }
+.titulo-pagina {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cartao {
+    width: 100%;
+    background: #2C343A;
+    border-radius: 15px;
+    overflow: hidden;
+
+    /* Temporáriro */
+    margin-top: 15px;
+}
+
+.cartao__conteudo {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cartao__destaque {
+    grid-column: span 2;
+}
+
+.cartao__titulo {
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    grid-column: span 2;
+
+    /* Temporáriro */
+    margin-top: 10px;
+}
+
+.cartao__perfil {
+    font-size: 0.9rem;
+    color: #95999C;
+
+    grid-column: span 2;
+
+    /* Temporáriro */
+    margin-top: 10px;
+}
+
+.cartao__info {
+    display: flex;
+    align-items: center;
+    color: #95999C;
+
+    /* Temporáriro */
+    margin-top: 8px;
+}
+
+.cartao__info--tempo::before {
+    content: '\e90c';
+    margin-right: 8px;
+
+
+}
+
+.cartao__info--visualizacao::before {
+    content: '\e90f';
+    margin-right: 8px;
+}
+
+.cartao__botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #0480DC;
+
+    font-size: 0.9rem;
+
+
+    /* Temporáriro */
+    margin-top: 15px;
+}
+
+.cartao__botao--play::before {
+    content: '\e90b';
+    font-size: 24px;
+}
+
+.cartao__botao--destaque {
+    width: 100%;
+
+    grid-column: span 2;
+}
+
+.cartao__botao--destaque::before {
+    margin-right: 8px;
 }
